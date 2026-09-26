@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta name="google-site-verification" content="9E-EPhhlEji0EJFlmtfMGoTDj-0MgCBA4urHx0BZ39I" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -583,7 +583,6 @@
 
         <li><a href="#courses">Courses</a></li>
 
-        <li><a href="#faculty">Faculty</a></li>
 
         <li><a href="#gallery">Gallery</a></li>
 
@@ -758,7 +757,7 @@
         </div>
 
 
-        <div class="card">
+        <div class="card" onclick="openBCA()" style="cursor:pointer;">
 
             <div class="icon">💻</div>
 
@@ -767,6 +766,10 @@
             <p>
                 Bachelor of Computer Applications
             </p>
+
+            <small style="display:block;margin-top:12px;color:#0077ff;font-weight:bold;">
+                Click to explore BCA
+            </small>
 
         </div>
 
@@ -814,52 +817,75 @@
 </section>
 
 
-<!-- FACULTY -->
+<!-- FACULTY (hidden from main page; opened from BCA) -->
 
-<section id="faculty">
+<section id="faculty" style="display:none;"></section>
 
-    <h2 class="title">
-        Our <span>Faculty</span>
-    </h2>
+<!-- BCA DETAILS + OUR FACULTY -->
 
-    <div class="faculty">
+<div id="bcaModal" class="teacher-modal">
+    <div class="teacher-box" style="max-width:950px;max-height:90vh;overflow:auto;">
 
-        <div class="faculty-card" onclick="showTeacher('Rakesh Singhal','👨‍🏫','Head of Department (HOD)','Experience information not provided','Academic leadership, departmental coordination and guidance.')">
-            <h3>Rakesh Singhal</h3>
+        <button class="close-btn" onclick="closeBCA()">×</button>
+
+        <div class="faculty-icon" style="margin-bottom:20px;">💻</div>
+
+        <h2>Bachelor of Computer Applications (BCA)</h2>
+
+        <p style="margin:18px 0;text-align:left;">
+            The BCA program focuses on computer applications, programming,
+            software development, databases, web development and modern
+            computing skills.
+        </p>
+
+        <div style="background:#f4f7fb;padding:20px;border-radius:18px;text-align:left;margin-bottom:25px;">
+            <h3 style="color:#07152e;margin-bottom:10px;">BCA Department</h3>
+            <p style="line-height:1.7;">
+                Students learn programming, databases, operating systems,
+                web development, software testing and other computer-related
+                subjects through academic and practical learning.
+            </p>
         </div>
 
-        <div class="faculty-card" onclick="showTeacher('Harbhajan Singh','💻','C & C++','Experience: 20 Years','C and C++ programming and programming fundamentals.')">
-            <h3>Harbhajan Singh</h3>
-        </div>
+        <h2 style="margin:20px 0;color:#07152e;">Our Faculty</h2>
 
-        <div class="faculty-card" onclick="showTeacher('Anju Yadav','🖥️','LOC & Operating System','Experience: 12 Years','LOC and Operating System concepts.')">
-            <h3>Anju Yadav</h3>
-        </div>
+        <div class="faculty">
 
-        <div class="faculty-card" onclick="showTeacher('Dr. Mamta Rani','☕','Java & Data System','Experience: 6 Years','Java programming and data system concepts.')">
-            <h3>Dr. Mamta Rani</h3>
-        </div>
+            <div class="faculty-card" onclick="showTeacher('Rakesh Singhal','👨‍🏫','Head of Department (HOD)','Experience information not provided','Academic leadership, departmental coordination and guidance.','Qualification information not provided','Head of Department (HOD)','Deptt. of BCA')">
+                <h3>Rakesh Singhal</h3>
+            </div>
 
-        <div class="faculty-card" onclick="showTeacher('Anurita','🌐','FOC & WD','Experience: 4 Years','Fundamentals of computers and web development.')">
-            <h3>Anurita</h3>
-        </div>
+            <div class="faculty-card" onclick="showTeacher('Harbhajan Singh','💻','C & C++','Experience: 37 Years','C and C++ programming and programming fundamentals.','PGDCA, M.Sc, M.Tech','Assistant Professor','Deptt. of BCA')">
+                <h3>Harbhajan Singh</h3>
+            </div>
 
-        <div class="faculty-card" onclick="showTeacher('Surbhi Bansal','🎨','Computer Graphics & DBMS','Experience: 2 Years','Computer graphics and database management systems.')">
-            <h3>Surbhi Bansal</h3>
-        </div>
+            <div class="faculty-card" onclick="showTeacher('Anju Yadav','🖥️','LOC & Operating System','Experience: 17 Years','LOC and Operating System concepts.','M.Tech (CSE), B.Tech (CSE), Diploma (CSE)','Assistant Professor','Deptt. of BCA')">
+                <h3>Anju Yadav</h3>
+            </div>
 
-        <div class="faculty-card" onclick="showTeacher('Rakhi Mangal','📚','SEC','Experience: 2 Years','SEC and skill-based learning.')">
-            <h3>Rakhi Mangal</h3>
-        </div>
+            <div class="faculty-card" onclick="showTeacher('Dr. Mamta Rani','☕','Java & Data System','Experience: 7 Years','Java programming and data system concepts.','Ph.D, UGC NET, M.Tech (CSE), MCA, M.Sc (IT)','Assistant Professor','Deptt. of BCA')">
+                <h3>Dr. Mamta Rani</h3>
+            </div>
 
-        <div class="faculty-card" onclick="showTeacher('Deepanjali Sharma','🧪','Software Testing & Data Science','Experience: 2 Years','Software testing methodologies and data science concepts.')">
-            <h3>Deepanjali Sharma</h3>
-        </div>
+            <div class="faculty-card" onclick="showTeacher('Anurita','🌐','FOC & WD','NET Qualified','Fundamentals of computers and web development.','B.Tech (IT), MBA (IT)','Assistant Professor','Deptt. of BCA')">
+                <h3>Anurita</h3>
+            </div>
 
+            <div class="faculty-card" onclick="showTeacher('Surbhi Bansal','🎨','Computer Graphics & DBMS','Teaching Experience: 3 Years','Specialisation in AI and Database.','BCA, MCA','Faculty','Deptt. of BCA')">
+                <h3>Surbhi Bansal</h3>
+            </div>
+
+            <div class="faculty-card" onclick="showTeacher('Rakhi Mangla','📚','SEC','Experience: 3 Years','SEC and skill-based learning.','BCA, M.Sc (CS)','Assistant Professor','Deptt. of BCA')">
+                <h3>Rakhi Mangla</h3>
+            </div>
+
+            <div class="faculty-card" onclick="showTeacher('Deepanjali','🧪','Software Testing & Data Science','Experience: 2 Years','Software testing methodologies and data science concepts.','BA Mathematics, 1 Year Diploma in Computer, MCA','Assistant Professor','Deptt. of BCA')">
+                <h3>Deepanjali</h3>
+            </div>
+
+        </div>
     </div>
-
-</section>
-
+</div>
 
 <!-- TEACHER DETAILS POPUP -->
 
@@ -878,6 +904,12 @@
         <div id="teacherExperience" class="teacher-experience">Experience</div>
 
         <p id="teacherDetails">Teacher details</p>
+
+        <div style="margin-top:18px;text-align:left;background:#f4f7fb;padding:16px;border-radius:15px;">
+            <p><strong>🎓 Qualification:</strong> <span id="teacherQualification">Not provided</span></p>
+            <p><strong>👩‍🏫 Designation:</strong> <span id="teacherDesignation">Not provided</span></p>
+            <p><strong>💻 Department:</strong> <span id="teacherDepartment">Not provided</span></p>
+        </div>
 
     </div>
 
@@ -1018,13 +1050,24 @@
     }
 
 
-    function showTeacher(name, icon, subject, experience, details) {
+    function showTeacher(name, icon, subject, experience, details, qualification, designation, department) {
         document.getElementById("teacherName").innerText = name;
         document.getElementById("teacherPhoto").innerText = icon;
         document.getElementById("teacherSubject").innerText = subject;
         document.getElementById("teacherExperience").innerText = experience;
         document.getElementById("teacherDetails").innerText = details;
+        document.getElementById("teacherQualification").innerText = qualification || "Not provided";
+        document.getElementById("teacherDesignation").innerText = designation || "Not provided";
+        document.getElementById("teacherDepartment").innerText = department || "Not provided";
         document.getElementById("teacherModal").classList.add("show");
+    }
+
+    function openBCA() {
+        document.getElementById("bcaModal").classList.add("show");
+    }
+
+    function closeBCA() {
+        document.getElementById("bcaModal").classList.remove("show");
     }
 
     function closeTeacher() {
@@ -1045,3 +1088,5 @@
 </body>
 
 </html>
+
+       
