@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KLP College Rewari | Since 1964</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    transition:0.4s;
+}
+
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#07152e;
+    padding:12px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 15px #0005;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.logo-area img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:white;
+    object-fit:cover;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00d9ff;
+}
+
+/* HERO */
+
+.hero{
+    min-height:550px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+
+    background:
+    linear-gradient(#00152dcc,#003b70cc),
+    url("klp logo.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+    text-shadow:3px 3px 10px black;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    margin:8px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    background:#00c6ff;
+    color:white;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 10px 25px #00c6ff88;
+}
+
+.btn-red{
+    background:#ff1744;
+}
+
+/* NOTICE */
+
+.notice{
+    background:#ffd600;
+    padding:12px;
+    font-weight:bold;
+    overflow:hidden;
+}
+
+/* SECTIONS */
+
+section{
+    padding:70px 7%;
+}
+
+.title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:40px;
+    color:#07152e;
+}
+
+.title span{
+    color:#0077ff;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 30px #0003;
+}
+
+.about-text{
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* PRINCIPAL */
+
+.principal-card{
+    margin-top:35px;
+    background:white;
+    border-radius:22px;
+    padding:35px;
+    box-shadow:0 10px 30px #0002;
+    border-left:6px solid #0077ff;
+}
+
+.principal-profile{
+    display:grid;
+    grid-template-columns:190px 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.principal-photo{
+    width:180px;
+    height:210px;
+    border-radius:20px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#eaf6ff,#c8e9ff);
+    border:5px solid #0077ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+    box-shadow:0 10px 25px #0077ff33;
+}
+
+.principal-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.principal-card h3{
+    color:#07152e;
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.principal-designation{
+    color:#0077ff;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.principal-card p{
+    line-height:1.7;
+    color:#444;
+}
+
+.principal-info{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:25px;
+}
+
+.principal-info-box{
+    background:#f4f7fb;
+    padding:18px;
+    border-radius:15px;
+}
+
+.principal-info-box strong{
+    display:block;
+    color:#07152e;
+    margin-bottom:8px;
+}
+
+.principal-message{
+    margin-top:25px;
+    padding:22px;
+    background:#07152e;
+    color:white;
+    border-radius:18px;
+    line-height:1.7;
+}
+
+/* STATS */
+
+.stats{
+    background:#07152e;
+    color:white;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+    gap:20px;
+}
+
+.stat{
+    padding:20px;
+}
+
+.stat h2{
+    font-size:40px;
+    color:#00d9ff;
+}
+
+.stat p{
+    margin-top:8px;
+}
+
+/* COURSES */
+
+.courses{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px #0002;
+    transition:0.3s;
+    border-top:5px solid #0077ff;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px #0003;
+}
+
+.card .icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#07152e;
+    margin-bottom:12px;
+    font-size:24px;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+/* FACULTY */
+
+.faculty{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.faculty-card{
+    background:white;
+    padding:25px 18px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px #0002;
+    transition:0.3s;
+    border-top:5px solid #00a8ff;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.faculty-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px #0003;
+}
+
+.faculty-mini-photo{
+    width:100px;
+    height:100px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    overflow:hidden;
+    border:4px solid #0077ff;
+    background:#eaf6ff;
+    box-shadow:0 8px 20px #0077ff44;
+}
+
+.faculty-mini-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.faculty-card h3{
+    color:#07152e;
+    font-size:21px;
+    margin-bottom:8px;
+}
+
+.faculty-card .designation{
+    color:#0077ff;
+    font-weight:bold;
+    font-size:14px;
+    margin-bottom:12px;
+    text-transform:uppercase;
+}
+
+.faculty-card p{
+    line-height:1.6;
+    color:#444;
+    font-size:15px;
+}
+
+/* BCA EXTRA SECTIONS */
+
+.bca-extra{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin:30px 0;
+}
+
+.bca-extra-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px #0002;
+    border-top:5px solid #0077ff;
+    transition:0.3s;
+}
+
+.bca-extra-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px #0003;
+}
+
+.bca-extra-card h3{
+    color:#07152e;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.bca-extra-card p{
+    line-height:1.6;
+}
+
+/* CLICKABLE BCA BUTTON */
+
+.bca-section-button{
+    cursor:pointer;
+}
+
+/* MODALS */
+
+.teacher-modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:5000;
+    background:rgba(0,0,0,0.78);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.teacher-modal.show{
+    display:flex;
+}
+
+.teacher-box{
+    width:100%;
+    max-width:500px;
+    background:white;
+    border-radius:25px;
+    padding:30px 25px;
+    text-align:center;
+    position:relative;
+    box-shadow:0 20px 60px #0008;
+    animation:teacherPopup .3s ease;
+    max-height:90vh;
+    overflow:auto;
+}
+
+@keyframes teacherPopup{
+
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+/* PDF */
+
+.pdf-box{
+    width:100%;
+    max-width:1100px;
+    height:90vh;
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    position:relative;
+    box-shadow:0 20px 60px #0008;
+}
+
+.pdf-box iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius:12px;
+}
+
+/* TEACHER PHOTO */
+
+.teacher-photo{
+    width:190px;
+    height:220px;
+    margin:0 auto 20px;
+    border:5px solid #0077ff;
+    border-radius:20px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#eaf6ff,#c8e9ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:65px;
+    box-shadow:0 10px 30px #0077ff44;
+}
+
+.teacher-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.teacher-box h2{
+    color:#07152e;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.teacher-subject{
+    color:#0077ff;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.teacher-experience{
+    display:inline-block;
+    background:#07152e;
+    color:white;
+    padding:8px 18px;
+    border-radius:20px;
+    margin-bottom:18px;
+    font-weight:bold;
+}
+
+.teacher-box p{
+    color:#444;
+    line-height:1.7;
+}
+
+.close-btn{
+    position:absolute;
+    right:18px;
+    top:15px;
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:#ff1744;
+    color:white;
+    font-size:25px;
+    cursor:pointer;
+    z-index:10;
+}
+
+/* ADMISSION */
+
+.admission{
+    background:linear-gradient(135deg,#07152e,#005bbb);
+    color:white;
+    text-align:center;
+    border-radius:25px;
+    margin:30px 7%;
+    padding:60px 20px;
+    box-shadow:0 15px 40px #0004;
+}
+
+.admission h2{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.admission p{
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.06);
+    box-shadow:0 10px 30px #0005;
+}
+
+/* CONTACT */
+
+.contact{
+    background:white;
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px #0002;
+    text-align:center;
+}
+
+.contact p{
+    font-size:18px;
+    margin:15px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#07152e;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:50px;
+}
+
+footer h2{
+    margin-bottom:10px;
+}
+
+/* TOP BUTTON */
+
+#topBtn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#0077ff;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+    z-index:999;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .faculty{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:800px){
+
+    nav{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .principal-profile{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .principal-photo{
+        margin:auto;
+    }
+
+    .principal-info{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .courses{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .bca-extra{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .faculty{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .title{
+        font-size:30px;
+    }
+
+    .principal-card{
+        padding:22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo-area">
+
+<img src="klp logo.jpg">
+
+<span>KLP COLLEGE REWARI</span>
+
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- NOTICE -->
+
+<div class="notice">
+
+<marquee>
+
+🎓 ADMISSION OPEN 2026-2027
+&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+KLP COLLEGE REWARI — SINCE 1964
+
+</marquee>
+
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>KLP COLLEGE REWARI</h1>
+
+<p>
+
+SINCE 1964
+
+<br>
+
+Knowledge • Discipline • Excellence
+
+</p>
+
+<a href="#courses" class="btn">
+Explore Courses
+</a>
+
+<a href="#contact" class="btn btn-red">
+Contact Us
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="title">
+About <span>KLP College</span>
+</h2>
+
+<div class="about">
+
+<div>
+
+<img src="klp1.jpg">
+
+</div>
+
+<div class="about-text">
+
+<p>
+
+Kishan Lal Public College (KLP College) in Rewari
+is one of the oldest and premier co-educational
+institutions of higher learning in South Haryana.
+
+</p>
+
+<br>
+
+<p>
+
+Established in 1964 in memory of the visionary
+philanthropist Late Pt. Kishan Lal Sharma, the
+institution has a long tradition of academic
+pursuit and educational development.
+
+</p>
+
+<br>
+
+<p>
+
+The college provides opportunities for students
+to pursue higher education in different fields.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRINCIPAL PROFILE -->
+
+<div class="principal-card">
+
+<div class="principal-profile">
+
+<div class="principal-photo">
+
+<!-- Agar principal ki photo hai to yahan file name change kar sakte ho -->
+
+👩‍🏫
+
+</div>
+
+<div>
+
+<h3>
+Dr. Kavita Gupta
+</h3>
+
+<div class="principal-designation">
+Principal, Kishan Lal Public College, Rewari
+</div>
+
+<p>
+
+Dr. Kavita Gupta is the Principal of Kishan Lal
+Public College, Rewari. The college emphasizes
+quality education, academic excellence, self-discipline,
+positive attitude, rational thinking and the overall
+development of students.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="principal-info">
+
+<div class="principal-info-box">
+
+<strong>🎓 Qualification</strong>
+
+M.Com, Ph.D. (Commerce)
+
+</div>
+
+
+<div class="principal-info-box">
+
+<strong>📚 Specialization</strong>
+
+Accounting, Finance & Statistics
+
+</div>
+
+
+<div class="principal-info-box">
+
+<strong>🏆 Achievement</strong>
+
+Merit Holder in MDU Rohtak in UG & PG
+
+</div>
+
+</div>
+
+
+<div class="principal-message">
+
+<strong>Principal's Desk</strong>
+
+<br><br>
+
+The college aims to provide an academic environment
+that goes beyond books and examinations. Students
+are encouraged to develop all-round personality,
+positive attitude, self-discipline and rational thinking,
+while becoming creative, productive and responsible
+citizens.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stat">
+
+<h2>1964</h2>
+<p>Established</p>
+
+</div>
+
+<div class="stat">
+
+<h2>60+</h2>
+<p>Years of Legacy</p>
+
+</div>
+
+<div class="stat">
+
+<h2>15+</h2>
+<p>Acres Campus</p>
+
+</div>
+
+<div class="stat">
+
+<h2>UG & PG</h2>
+<p>Programs</p>
+
+</div>
+
+</section>
+
+
+<!-- COURSES -->
+
+<section id="courses">
+
+<h2 class="title">
+Courses <span>Available</span>
+</h2>
+
+<div class="courses">
+
+
+<div class="card">
+
+<div class="icon">🎓</div>
+
+<h3>BA</h3>
+
+<p>
+Bachelor of Arts
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🔬</div>
+
+<h3>B.Sc</h3>
+
+<p>
+Bachelor of Science
+</p>
+
+</div>
+
+
+<!-- BCA -->
+
+<div class="card"
+onclick="openBCA()"
+style="cursor:pointer;">
+
+<div class="icon">💻</div>
+
+<h3>BCA</h3>
+
+<p>
+Bachelor of Computer Applications
+</p>
+
+<small style="
+display:block;
+margin-top:12px;
+color:#0077ff;
+font-weight:bold;
+">
+
+Click to explore BCA
+
+</small>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📊</div>
+
+<h3>B.Com</h3>
+
+<p>
+Bachelor of Commerce
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">💼</div>
+
+<h3>BBA</h3>
+
+<p>
+Bachelor of Business Administration
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🎓</div>
+
+<h3>PG Programs</h3>
+
+<p>
+M.COMS • MBA
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BCA MODAL -->
+
+<div id="bcaModal" class="teacher-modal">
+
+<div class="teacher-box"
+style="max-width:950px;">
+
+<button class="close-btn"
+onclick="closeBCA()">
+
+×
+
+</button>
+
+
+<div class="faculty-icon"
+style="
+margin:0 auto 20px;
+width:78px;
+height:78px;
+border-radius:50%;
+background:linear-gradient(135deg,#07152e,#0077ff);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+">
+
+💻
+
+</div>
+
+
+<h2>
+Bachelor of Computer Applications (BCA)
+</h2>
+
+
+<p style="
+margin:18px 0;
+text-align:left;
+">
+
+The BCA program focuses on computer applications,
+programming, software development, databases,
+web development and modern computing skills.
+
+</p>
+
+
+<div style="
+background:#f4f7fb;
+padding:20px;
+border-radius:18px;
+text-align:left;
+margin-bottom:25px;
+">
+
+<h3 style="
+color:#07152e;
+margin-bottom:10px;
+">
+
+BCA Department
+
+</h3>
+
+<p style="line-height:1.7;">
+
+Students learn programming, databases,
+operating systems, web development,
+software testing and other computer-related
+subjects through academic and practical learning.
+
+</p>
+
+</div>
+
+
+<!-- OUR FACULTY FIRST -->
+
+<div class="bca-extra">
+
+<div class="bca-extra-card bca-section-button"
+onclick="openFaculty()">
+
+<h3>
+👩‍🏫 Our Faculty
+</h3>
+
+<small style="
+display:block;
+margin-top:12px;
+color:#0077ff;
+font-weight:bold;
+">
+
+Click to explore Faculty
+
+</small>
+
+</div>
+
+
+<!-- BCA SYLLABUS -->
+
+<div class="bca-extra-card bca-section-button"
+onclick="openSyllabus()">
+
+<h3>
+📚 BCA Syllabus
+</h3>
+
+<small style="
+display:block;
+margin-top:12px;
+color:#0077ff;
+font-weight:bold;
+">
+
+Click to view complete syllabus PDF
+
+</small>
+
+</div>
+
+</div>
+
+
+<!-- STUDENT DETAILS -->
+
+<div class="bca-extra-card bca-section-button"
+onclick="openStudentDetails()">
+
+<h3>
+👨‍🎓 Student Details
+</h3>
+
+<small style="
+display:block;
+margin-top:12px;
+color:#0077ff;
+font-weight:bold;
+">
+
+Click to view Student Details
+
+</small>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- SYLLABUS PDF MODAL -->
+
+<div id="syllabusModal"
+class="teacher-modal">
+
+<div class="pdf-box">
+
+<button class="close-btn"
+onclick="closeSyllabus()">
+
+×
+
+</button>
+
+<iframe
+src="BCA%201st-6th%2029.07.2026.pdf"
+title="BCA Syllabus">
+
+</iframe>
+
+</div>
+
+</div>
+
+
+<!-- STUDENT DETAILS MODAL -->
+
+<div id="studentModal"
+class="teacher-modal">
+
+<div class="teacher-box"
+style="max-width:700px;">
+
+<button class="close-btn"
+onclick="closeStudentDetails()">
+
+×
+
+</button>
+
+<h2>
+👨‍🎓 BCA Student Details
+</h2>
+
+<div style="
+margin-top:25px;
+padding:25px;
+background:#f4f7fb;
+border-radius:18px;
+line-height:1.8;
+">
+
+<p>
+Student details section.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FACULTY MODAL -->
+
+<div id="facultyModal" class="teacher-modal">
+
+<div class="teacher-box" style="max-width:950px;">
+
+<button class="close-btn" onclick="closeFaculty()">
+
+×
+
+</button>
+
+<h2 style="margin:20px 0;color:#07152e;">
+Our Faculty
+</h2>
+
+<div class="faculty">
+
+
+<!-- RAKESH -->
+
+<div class="faculty-card"
+onclick="showTeacher(
+'Rakesh Singhal',
+'👨‍🏫',
+null,
+'Head of Department (HOD)',
+'Experience information not provided',
+'Academic leadership, departmental coordination and guidance.',
+'Qualification information not provided',
+'Head of Department (HOD)',
+'Deptt. of BCA'
+)">
+
+<div class="faculty-mini-photo">
+
+<span style="
+display:flex;
+width:100%;
+height:100%;
+align-items:center;
+justify-content:center;
+font-size:45px;
+">
+
+👨‍🏫
+
+</span>
+
+</div>
+
+<h3>
+Rakesh Singhal
+</h3>
+
+<div class="designation">
+HOD
+</div>
+
+</div>
+
+
+<!-- HARBHAJAN -->
+
+<div class="faculty-card"
+onclick="showTeacher(
+'Harbhajan Singh',
+'💻',
+null,
+'C & C++',
+'Experience: 37 Years',
+'C and C++ programming and programming fundamentals.',
+'PGDCA, M.Sc, M.Tech',
+'Assistant Professor',
+'Deptt. of BCA'
+)">
+
+<div class="faculty-mini-photo">
+
+<span style="
+display:flex;
+width:100%;
+height:100%;
+align-items:center;
+justify-content:center;
+font-size:45px;
+">
+
+💻
+
+</span>
+
+</div>
+
+<h3>
+Harbhajan Singh
+</h3>
+
+<div class="designation">
+Assistant Professor
+</div>
+
+</div>
+
+
+<!-- ANJU -->
+
+<div class="faculty-card"
+onclick="showTeacher(
+'Anju Yadav',
+'🖼️',
+'ANJU YADAV.jpeg',
+'LOC & Operating System',
+'Experience: 17 Years',
+'LOC and Operating System concepts.',
+'M.Tech (CSE), B.Tech (CSE), Diploma (CSE)',
+'Assistant Professor',
+'Deptt. of BCA'
+)">
+
+<div class="faculty-mini-photo">
+
+<img src="ANJU YADAV.jpeg"
+alt="Anju Yadav">
+
+</div>
+
+<h3>
+Anju Yadav
+</h3>
+
+<div class="designation">
+Assistant Professor
+</div>
+
+</div>
+
+
+<!-- MAMTA -->
+
+<div class="faculty-card"
+onclick="showTeacher(
+'Dr. Mamta Rani',
+'🖼️',
+'mamta.jpeg',
+'Java & Data structure',
+'Experience: 7 Years',
+'Java programming and Data structure concepts.',
+'Ph.D, UGC NET, M.Tech (CSE), MCA, M.Sc (IT)',
+'Assistant Professor',
+'Deptt. of BCA'
+)">
+
+<div class="faculty-mini-photo">
+
+<img src="mamta.jpeg"
+alt="Dr. Mamta Rani">
+
+</div>
+
+<h3>
+Dr. Mamta Rani
+</h3>
+
+<div class="designation">
+Assistant Professor
+</div>
+
+</div>
+
+
+<!-- ANURITA -->
+
+<div class="faculty-card"
+onclick="showTeacher(
+'Anurita',
+'🖼️',
+'ANURITA.jpeg',
+'FOC & WD',
+'Experience: 4 YEARS',
+'Fundamentals of computers and web development.',
+'B.Tech (IT), UGC NET, MBA (IT), Networking',
+'Assistant Professor',
+'Deptt. of BCA'
+)">
+
+<div class="faculty-mini-photo">
+
+<img src="ANURITA.jpeg"
+alt="Anurita">
+
+</div>
+
+<h3>
+Anurita
+</h3>
+
+<div class="designation">
+Assistant Professor
+</div>
+
+</div>
+
+
+<!-- SURBHI -->
+
+<div class="faculty-card"
+onclick="showTeacher(
+'Surbhi Bansal',
+'🖼️',
+'surbhi bansal.jpeg',
+'Computer Graphics & DBMS',
+'Teaching Experience: 3 Years',
+'Specialisation in AI and Database.',
+'BCA, MCA, UGC NET',
+'Assistant Professor',
+'Deptt. of BCA'
+)">
+
+<div class="faculty-mini-photo">
+
+<img src="surbhi bansal.jpeg"
+alt="Surbhi Bansal">
+
+</div>
+
+<h3>
+Surbhi Bansal
+</h3>
+
+<div class="designation">
+Assistant Professor
+</div>
+
+</div>
+
+
+<!-- RAKHI MANGAL -->
+
+<div class="faculty-card"
+onclick="showTeacher(
+'Rakhi Mangla',
+'🖼️',
+'RAKHI MANGAL.jpeg',
+'SEC',
+'Experience: 3 Years',
+'SEC and skill-based learning.',
+'BCA, M.Sc (CS)',
+'Assistant Professor',
+'Deptt. of BCA'
+)">
+
+<div class="faculty-mini-photo">
+
+<img src="RAKHI MANGAL.jpeg"
+alt="Rakhi Mangla">
+
+</div>
+
+<h3>
+Rakhi Mangla
+</h3>
+
+<div class="designation">
+Assistant Professor
+</div>
+
+</div>
+
+
+<!-- DEEPANJALI -->
+
+<div class="faculty-card"
+onclick="showTeacher(
+'Deepanjali',
+'🖼️',
+'DEEPANGLI.jpeg',
+'Software Testing & Data Science',
+'Experience: 2 Years',
+'Software testing methodologies and data science concepts.',
+'BA Mathematics, 1 Year Diploma in Computer, MCA',
+'Assistant Professor',
+'Deptt. of BCA'
+)">
+
+<div class="faculty-mini-photo">
+
+<img src="DEEPANGLI.jpeg"
+alt="Deepanjali">
+
+</div>
+
+<h3>
+Deepanjali
+</h3>
+
+<div class="designation">
+Assistant Professor
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TEACHER DETAILS -->
+
+<div id="teacherModal"
+class="teacher-modal">
+
+<div class="teacher-box">
+
+<button class="close-btn"
+onclick="closeTeacher()">
+
+×
+
+</button>
+
+
+<div id="teacherPhoto"
+class="teacher-photo">
+
+👨‍🏫
+
+</div>
+
+
+<h2 id="teacherName">
+Teacher Name
+</h2>
+
+
+<div id="teacherSubject"
+class="teacher-subject">
+
+Subject
+
+</div>
+
+
+<div id="teacherExperience"
+class="teacher-experience">
+
+Experience
+
+</div>
+
+
+<p id="teacherDetails">
+Teacher details
+</p>
+
+
+<div style="
+margin-top:18px;
+text-align:left;
+background:#f4f7fb;
+padding:16px;
+border-radius:15px;
+">
+
+<p>
+
+<strong>🎓 Qualification:</strong>
+
+<span id="teacherQualification">
+Not provided
+</span>
+
+</p>
+
+
+<p>
+
+<strong>👩‍🏫 Designation:</strong>
+
+<span id="teacherDesignation">
+Not provided
+</span>
+
+</p>
+
+
+<p>
+
+<strong>💻 Department:</strong>
+
+<span id="teacherDepartment">
+Not provided
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ADMISSION -->
+
+<div class="admission">
+
+<h2>
+Admission Open 2026-2027
+</h2>
+
+<p>
+Start your journey towards a bright future.
+</p>
+
+<a href="#contact"
+class="btn">
+
+Apply / Enquire Now
+
+</a>
+
+</div>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2 class="title">
+College <span>Gallery</span>
+</h2>
+
+<div class="gallery">
+
+<img src="klp back.jpeg">
+<img src="klp1.jpg">
+<img src="klp2.jpg">
+<img src="klp3.jpg">
+<img src="klp4.jpg">
+<img src="klp5.jpg">
+<img src="klp6.jpg">
+<img src="klp7.jpg">
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="title">
+Contact <span>Us</span>
+</h2>
+
+<div class="contact">
+
+<h2>
+Kishan Lal Public College
+</h2>
+
+<p>
+📍 Rewari, Haryana
+</p>
+
+<p>
+📚 Admissions: 2026-2027
+</p>
+
+<p>
+🎓 UG & PG Programs Available
+</p>
+
+<a href="#home"
+class="btn">
+
+Back to Home
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>
+KLP COLLEGE REWARI
+</h2>
+
+<p>
+Since 1964 | Education • Excellence • Future
+</p>
+
+<br>
+
+<p>
+© 2026 KLP College Rewari. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- TOP BUTTON -->
+
+<button id="topBtn"
+onclick="goTop()">
+
+↑
+
+</button>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+let topButton =
+document.getElementById("topBtn");
+
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>300){
+
+topButton.style.display="block";
+
+}else{
+
+topButton.style.display="none";
+
+}
+
+};
+
+
+function goTop(){
+
+window.scrollTo({
+
+top:0,
+behavior:"smooth"
+
+});
+
+}
+
+
+/* SHOW TEACHER */
+
+function showTeacher(
+name,
+icon,
+photoPath,
+subject,
+experience,
+details,
+qualification,
+designation,
+department
+){
+
+document.getElementById("teacherName").innerText=name;
+
+
+const photoBox=
+document.getElementById("teacherPhoto");
+
+
+if(photoPath){
+
+photoBox.innerHTML=
+'<img src="'
++photoPath+
+'" alt="'
++name+
+'">';
+
+}else{
+
+photoBox.innerText=icon;
+
+}
+
+
+document.getElementById(
+"teacherSubject"
+).innerText=subject;
+
+
+document.getElementById(
+"teacherExperience"
+).innerText=experience;
+
+
+document.getElementById(
+"teacherDetails"
+).innerText=details;
+
+
+document.getElementById(
+"teacherQualification"
+).innerText=
+qualification || "Not provided";
+
+
+document.getElementById(
+"teacherDesignation"
+).innerText=
+designation || "Not provided";
+
+
+document.getElementById(
+"teacherDepartment"
+).innerText=
+department || "Not provided";
+
+
+document.getElementById(
+"teacherModal"
+).classList.add("show");
+
+}
+
+
+/* OPEN FACULTY */
+
+function openFaculty(){
+
+document.getElementById(
+"facultyModal"
+).classList.add("show");
+
+}
+
+
+/* CLOSE FACULTY */
+
+function closeFaculty(){
+
+document.getElementById(
+"facultyModal"
+).classList.remove("show");
+
+}
+
+
+/* OPEN BCA */
+
+function openBCA(){
+
+document.getElementById(
+"bcaModal"
+).classList.add("show");
+
+}
+
+
+/* CLOSE BCA */
+
+function closeBCA(){
+
+document.getElementById(
+"bcaModal"
+).classList.remove("show");
+
+}
+
+
+/* OPEN SYLLABUS */
+
+function openSyllabus(){
+
+document.getElementById(
+"syllabusModal"
+).classList.add("show");
+
+}
+
+
+/* CLOSE SYLLABUS */
+
+function closeSyllabus(){
+
+document.getElementById(
+"syllabusModal"
+).classList.remove("show");
+
+}
+
+
+/* OPEN STUDENT DETAILS */
+
+function openStudentDetails(){
+
+document.getElementById(
+"studentModal"
+).classList.add("show");
+
+}
+
+
+/* CLOSE STUDENT DETAILS */
+
+function closeStudentDetails(){
+
+document.getElementById(
+"studentModal"
+).classList.remove("show");
+
+}
+
+
+/* CLOSE TEACHER */
+
+function closeTeacher(){
+
+document.getElementById(
+"teacherModal"
+).classList.remove("show");
+
+}
+
+
+/* CLICK OUTSIDE */
+
+document.getElementById(
+"teacherModal"
+).addEventListener(
+"click",
+function(event){
+
+if(event.target===this){
+
+closeTeacher();
+
+}
+
+});
+
+
+document.getElementById(
+"facultyModal"
+).addEventListener(
+"click",
+function(event){
+
+if(event.target===this){
+
+closeFaculty();
+
+}
+
+});
+
+
+document.getElementById(
+"bcaModal"
+).addEventListener(
+"click",
+function(event){
+
+if(event.target===this){
+
+closeBCA();
+
+}
+
+});
+
+
+document.getElementById(
+"syllabusModal"
+).addEventListener(
+"click",
+function(event){
+
+if(event.target===this){
+
+closeSyllabus();
+
+}
+
+});
+
+
+document.getElementById(
+"studentModal"
+).addEventListener(
+"click",
+function(event){
+
+if(event.target===this){
+
+closeStudentDetails();
+
+}
+
+});
+
+
+/* ESCAPE KEY */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+if(event.key==="Escape"){
+
+closeTeacher();
+closeFaculty();
+closeBCA();
+closeSyllabus();
+closeStudentDetails();
+
+}
+
+});
+
+</script>
+
+
+</body>
+
+</html>
